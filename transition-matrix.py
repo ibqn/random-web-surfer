@@ -3,8 +3,6 @@ from pystdlib import (
     stdio,
 )
 
-print("random web surfer")
-
 n = stdio.readInt()
 
 links_count = stdarray.create2D(n, n, 0)
@@ -18,7 +16,8 @@ while not stdio.isEmpty():
     out_degrees[i] += 1
     links_count[i][j] += 1
 
-stdio.writeln(f"{n}x{n} probability matrix")
+stdio.writeln("Probability matrix")
+stdio.writeln(n)
 
 for i in range(n):
     # Write probability distribution for row i.
