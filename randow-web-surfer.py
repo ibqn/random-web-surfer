@@ -1,4 +1,3 @@
-import math
 from pystdlib import (
     stdarray,
     stdio,
