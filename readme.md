@@ -1,3 +1,17 @@
+### Usage
+
+Transition matrix
+
+```bash
+cat tiny.txt | python transition-matrix.py
+```
+
+Simulating random web surfer
+
+```bash
+cat tiny.txt | python transition-matrix.py | python random-surfer.py 1000000
+```
+
 ### Getting started
 
 create python virtual environment named `venv`
@@ -30,6 +44,6 @@ python -c 'import pystdlib; print("ok")'
 
 to deactivate venv run `deactivate`
 
-## Git
+### Git
 
 create new repository by running `git init` and check its status with `git status`
