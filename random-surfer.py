@@ -2,6 +2,7 @@ import random
 from pystdlib import (
     stdio,
     stdarray,
+    stddraw,
 )
 from argparse import ArgumentParser
 
@@ -22,6 +23,9 @@ stdio.readLine()
 
 # Read size of the transition matrix.
 n = stdio.readInt()
+
+stddraw.setXscale(-0.5, n - 0.5)
+stddraw.setYscale(0, moves // 3)
 
 # p = [stdio.readFloat() for i in range(n) for j in range(n)]
 p = stdarray.create2D(n, n, 0)
@@ -45,6 +49,14 @@ for i in range(moves):
 
     hits[page] += 1
 
+    if i % 1000 == 0:
+        stddraw.clear()
+        for k in range(n):
+            stddraw.filledRectangle(k - 0.25, 0.0, 0.5, hits[k])
+        stddraw.show(10)
+
 for v in hits:
     stdio.writef(f"{v / moves:8.5f}")
 stdio.writeln()
+
+stddraw.show()
