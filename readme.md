@@ -12,6 +12,10 @@ Simulating random web surfer
 cat tiny.txt | python transition-matrix.py | python random-surfer.py 1000000
 ```
 
+Page rank
+
+![Page Ranking](page-rank.png)
+
 ### Getting started
 
 create python virtual environment named `venv`
